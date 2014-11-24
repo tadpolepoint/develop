@@ -15,4 +15,4 @@ output_style = :expanded
 line_comments = false
 
 preferred_syntax = :sass
-fireapp_build_path = "project-name"
+fireapp_build_path = "release"
