@@ -1,0 +1,99 @@
+@import compass/css3/transform
+@import compass/css3/box-sizing
+
+body
+  font-family: 'Lato', sans-serif
+  font-weight: 300
+  font-size: 12px
+  height: 100vh
+  padding: 0
+  margin: 0
+
+*
+  +box-sizing(border-box)
+
+.hide
+  display: none
+
+.wrapper
+  width: 50%
+  margin: 0 auto
+  position: relative
+  top: 50%
+  margin-top: -10px
+  +transform(translateY(-50%))
+
+a
+  text-decoration: none
+  color: #000
+  &:hover
+    border-bottom: 2px solid
+
+header
+  text-align: right
+  position: relative
+  padding-top: 100px
+  padding-bottom: 20px
+  z-index: 2
+  .logo
+    position: absolute
+    top: 0
+    left: 50%
+    +transform(translateX(-50%))
+    a:hover
+      border: none
+  .external-link
+    .object-title:before
+      content: '｜'
+
+.content
+  text-align: center
+  position: relative
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: center 0
+  min-height: 60vh
+  // img
+  //   width: 100%
+  //   max-height: 60vh
+  .about-text
+    position: absolute
+    top: 130px
+    right: -75px
+    width: 185px
+    height: 185px
+    background: #fff
+    padding: 20px
+    font-size: 12px
+    line-height: 18px
+    text-align: left
+  .sidemenu
+    font-size: 40px
+    position: absolute
+    left: -90px
+    top: -10px
+    text-align: left
+    line-height: 1.3em
+    ul
+      padding: 0
+      margin: 0
+    li
+      list-style: none
+    .active
+      font-weight: bold
+
+.menu
+  text-align: right
+  margin-top: 44px
+  li
+    display: inline-block
+    margin-left: 35px
+  a
+    padding-bottom: 5px
+    &.active
+      border-bottom: 2px solid
+
+.moc
+  position: absolute
+  left: 0
+  bottom: 0
