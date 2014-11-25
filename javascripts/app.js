@@ -1,5 +1,5 @@
 (function() {
-  var $artist, $body, $content, $externalLink, $object, $objectTitle, $random, $togglers, DEBUG, counter, getItems, setBackground, showItem, showItems, xx;
+  var $artist, $body, $content, $externalLink, $hiddenPreLoader, $object, $objectTitle, $random, $togglers, DEBUG, counter, getItems, setBackground, showItem, showItems, xx;
 
   xx = function(t) {
     return DEBUG && console.log(t);
@@ -15,6 +15,14 @@
 
   $body.on('click', 'a[href=#]', function(event) {
     return event.preventDefault();
+  });
+
+  $hiddenPreLoader = $('<div class="hide">').appendTo($body);
+
+  _.each(data, function(item) {
+    return $('<img>').attr('src', "/uploads/" + item.url).appendTo($hiddenPreLoader).on('load', function() {
+      return $(this).remove();
+    });
   });
 
   setBackground = function(url) {

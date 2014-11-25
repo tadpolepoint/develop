@@ -9,6 +9,9 @@ $content = $('.content')
 counter = null
 
 $body.on 'click', 'a[href=#]', (event) -> event.preventDefault()
+$hiddenPreLoader = $('<div class="hide">').appendTo($body)
+_.each data, (item) ->
+  $('<img>').attr('src', "/uploads/#{item.url}").appendTo($hiddenPreLoader).on('load', -> $(@).remove())
 
 ######################
 # FUNCTIONS
