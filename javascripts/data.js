@@ -55,7 +55,7 @@
         name: '紅旗',
         title: '表演者'
       },
-      items: ['_MG_1295S.jpg', '_MG_1303S.jpg', '_MG_1351S.jpg', '_MG_1353S.jpg', '_MG_1365S.jpg']
+      items: ['1295S.jpg', '1303S.jpg', '1351S.jpg', '1353S.jpg', '1365S.jpg']
     }, {
       artist: 'You Wei Chen',
       artist_name: '陳',
