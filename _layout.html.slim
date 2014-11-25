@@ -2,7 +2,7 @@ doctype 5
 html lang="zh-TW"
   head
     = render '/layout_head'
-  body
+  body class="page-#{@page}"
     .wrapper
       = yield
     = render '/layout_footer'

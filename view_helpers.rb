@@ -12,7 +12,7 @@ module ViewHelpers
     if href == here
       active = "active"
     end
-    content_tag(:li, link_to(name, href, :class => active) )
+    content_tag(:li, link_to(name, href.gsub('.html', ''), :class => active) )
   end
 
 end

@@ -24,7 +24,6 @@ body {
   position: relative;
   top: 50%;
   margin-top: -10px;
-  max-height: 80vh;
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
@@ -106,6 +105,9 @@ header .external-link .object-title:before {
 }
 
 .menu {
+  position: relative;
+}
+.menu ul {
   text-align: right;
   margin-top: 44px;
 }
@@ -119,9 +121,12 @@ header .external-link .object-title:before {
 .menu a.active {
   border-bottom: 2px solid;
 }
-
-.moc {
+.menu .moc {
   position: absolute;
   left: 0;
   bottom: 0;
+  display: none;
+}
+.page-about .menu .moc {
+  display: block;
 }
