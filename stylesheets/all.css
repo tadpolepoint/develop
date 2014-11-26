@@ -60,6 +60,12 @@ header .logo a:hover {
 header .external-link .object-title:before {
   content: "｜";
 }
+header .external-link a[href="#"] {
+  pointer-events: none;
+}
+header .external-link a[href="#"]:hover {
+  border: none;
+}
 
 .content {
   text-align: center;
@@ -101,6 +107,12 @@ header .external-link .object-title:before {
   list-style: none;
 }
 .content .sidemenu .active {
+  font-weight: bold;
+}
+.content .sidemenu a:hover {
+  background: #000;
+  color: #fff;
+  border: none;
   font-weight: bold;
 }
 

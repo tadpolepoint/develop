@@ -20,8 +20,8 @@ _.each data, (item) ->
 setBackground = (url) ->
   $content.css('background-image', "url('/uploads/#{url}')")
 
-getItems = (artist, length) ->
-  res = _.where(data, {artist: artist})
+getItems = (id, length) ->
+  res = _.where(data, {id: id})
   res = _.sample(res, length) if length?
   res
 
@@ -42,8 +42,8 @@ showItems = (artist) ->
 
 showItem = (item) ->
   setBackground(item.url)
-  $artist.text(item.artist_name)
-  $object.text(item.object.name)
+  $artist.text(item.artist.zh_name).attr('href', item.artist.url || '#')
+  $object.text(item.object.name).attr('href', item.object.url || '#')
   $objectTitle.text(item.object.title)
 
 ######################

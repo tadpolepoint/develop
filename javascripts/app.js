@@ -29,11 +29,11 @@
     return $content.css('background-image', "url('/uploads/" + url + "')");
   };
 
-  getItems = function(artist, length) {
+  getItems = function(id, length) {
     var res;
 
     res = _.where(data, {
-      artist: artist
+      id: id
     });
     if (length != null) {
       res = _.sample(res, length);
@@ -69,8 +69,8 @@
 
   showItem = function(item) {
     setBackground(item.url);
-    $artist.text(item.artist_name);
-    $object.text(item.object.name);
+    $artist.text(item.artist.zh_name).attr('href', item.artist.url || '#');
+    $object.text(item.object.name).attr('href', item.object.url || '#');
     return $objectTitle.text(item.object.title);
   };
 

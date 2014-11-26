@@ -46,6 +46,10 @@ header
   .external-link
     .object-title:before
       content: '｜'
+    a[href="#"]
+      pointer-events: none
+      &:hover
+        border: none
 
 .content
   text-align: center
@@ -80,7 +84,11 @@ header
       list-style: none
     .active
       font-weight: bold
-
+    a:hover
+      background: #000
+      color: #fff
+      border: none
+      font-weight: bold
 .menu
   position: relative
   ul
